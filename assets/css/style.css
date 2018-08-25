@@ -1,21 +1,33 @@
 p {
     font-family: fantasy; 
     font-size: 16px;
-    line-height: 18px;
+    line-height: 24px;
     color: darkblue;
-    height: 75%;
-    width: 75%;
+    text-align: center;
+}
+
+
+h1 {
+    font-family: fantasy;
+    font-size: 48px;
+    color: darkblue;
+
 }
 
 .container {
     margin:auto;
     padding-left: 10px;
     padding-right: 20px;
-    width: 500px;
+    width: 960px;
+    padding: 30px;
+    margin: 30px;
+    background-color: palegreen;
 }
 
 .crystals {
     width: 75%;
 
-
+.space {
+    margin-bottom: 60px;
+}
 
