@@ -1,7 +1,15 @@
 //var list = ""; not sure what to do with this//
 
 //computerNumber is the number under the buttons//
-var computerNumber = "";
+var computerNumber  = Math.floor(Math.random() * 100);
+
+function randomWholeNum() {
+
+  // Only change code below this line.
+
+  return Math.random();
+}
+
 
 //crystalNumbers are the back end; var numberOne, etc., what to output when the buttons are pushed//
 var crystalNumbers = "";
