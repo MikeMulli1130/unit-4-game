@@ -1,63 +1,8 @@
-/* first choose a random number
-this is shown to the player at the beginning of the game */
-
-var randomNumber=Math.floor(Math.random()*79)
-console.log(randomNumber);
-
-
-/* need four buttons - one for each "Crystal"; when one is clicked the number is shown*/
-
-
-document.getElementById("ruby").onclick = numberOne;
-document.getElementById("emerald").onclick = numberTwo;
-document.getElementById("sapphire").onclick = numberThree;
-document.getElementById("topaz").onclick = numberFour;
-
-if {
-    numberOne + playerCount === randomNumber
-    console.log ("You Win!");
-}
-
-else if {
-
-}
-
-
-/*the nunber of the crystal will be added to the player's score (which starts at zero)*/
-
-/* the game keeps going until the player either goes over the original random number or*/
-/* or the player hits the number perfectly - if so, they win*/
-
-
-
-/* if the player goes OVER the original random number then they lose:*/
-
-
-/* player goes over: need to show "you lose"*/
-
-
-
-/* player hits it perfectly: need to show "you win!"*/
-
-
-/* need to keep a counter of what is guessed*/
-
-
-/* nee to reset the game when it's done (win or lose)*/
-
-
-
-
 // GLOBAL VARIABLES (accessible by all functions)
 // ==================================================================================================
 
-
 // Computer selected solution will be held here.
 var computerNumber = "";
-
-// This will break the solution into individual numbers to be stored in array.
-var inRandomNumber = [];
-
 
 // Holds a list of guessed numbers 
 var guessedNumbers = [];
@@ -65,16 +10,95 @@ var guessedNumbers = [];
 // Holds all of the wrong guesses.
 var wrongGuesses = [];
 
-// Holds the letters guessed
-var letterGuessed = "";
-
 // Game counters
 var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
 
-// FUNCTIONS (These are bits of code that we will call upon to run when needed).
-// ==================================================================================================
+/* first choose a random number this is shown to the player at the beginning of the game */
+
+chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)];
+
+
+
+randomNumber=crystalNumbers[Math.floor(Math.random()*crystalNumbers.length)];
+console.log(randomNumber);
+
+var playerCount =['']
+var numberOne, numberTwo, numberThree, numberFour;
+numberOne >=1 && <= 49;
+
+
+/* need four buttons - one for each "Crystal"; when one is clicked the number is shown*/
+/* the game keeps going until the player either goes over the original random number or*/
+/* or the player hits the number perfectly - if so, they win*/
+/* if the player goes OVER the original random number then they lose:*/
+
+
+document.getElementById("ruby").onclick = function(numberOne) {
+console.log(numberOne)
+}
+
+
+document.getElementById("emerald").onclick = numberTwo;
+document.getElementById("sapphire").onclick = numberThree;
+document.getElementById("topaz").onclick = numberFour;
+
+if {
+    "numberOne + playerCount" = = = randomNumber
+    console.log ("You Win!");
+}
+
+else if {
+  "numberOne + playerCount" > randomNumber
+  console.log ("You Lose");
+}
+
+else {
+  alert("Click another Crystal! You still have a chance!");
+}
+
+if {
+  numberTwo + playerCount === randomNumber
+  console.log ("You Win!");
+}
+
+else if {
+numberTwo + playerCount > randomNumber
+console.log ("You Lose");
+}
+
+else {
+alert("Click another Crystal! You still have a chance!");
+}
+
+if {
+  numberThree + playerCount === randomNumber
+  console.log ("You Win!");
+}
+
+else if {
+numberThree + playerCount > randomNumber
+console.log ("You Lose");
+}
+
+else {
+alert("Click another Crystal! You still have a chance!");
+}
+
+if {
+  numberFour + playerCount === randomNumber
+  console.log ("You Win!");
+}
+
+else if {
+numberFour + playerCount > randomNumber
+console.log ("You Lose");
+}
+
+else {
+alert("Click another Crystal! You still have a chance!");
+}
 
 // startGame()
 // It's how we we will start and restart the game.
@@ -84,17 +108,6 @@ function startGame() {
   // Reset the guesses back to 0.
   numGuesses = 9;
 
-  // Solution chosen randomly from wordList.
-  chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)];
-
-
-
-  // We print the solution in console (for testing).
-  console.log(chosenWord);
-
-  // CRITICAL LINE
-  // Here we *reset* the guess and success array at each round.
-  blanksAndSuccesses = [];
 
   // CRITICAL LINE
   // Here we *reset* the wrong guesses from the previous round.
@@ -109,51 +122,6 @@ function startGame() {
   // Print the initial blanks in console.
   console.log(blanksAndSuccesses);
 
-  // Reprints the guessesLeft to 9.
-  document.getElementById("guesses-left").innerHTML = numGuesses;
-
-  // Prints the blanks at the beginning of each round in the HTML.
-  document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
-
-  // Clears the wrong guesses from the previous round.
-  document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
-}
-
-// checkLetters() function
-// It's where we will do all of the comparisons for matches.
-// Again, it's not being called here. It's just being made for future use.
-function checkLetters(letter) {
-
-  // This boolean will be toggled based on whether or not
-  // a user letter is found anywhere in the word.
-  var letterInWord = false;
-
-  // Check if a letter exists inside the array at all.
-  for (var i = 0; i < numBlanks; i++) {
-
-    if (chosenWord[i] === letter) {
-
-      // If the letter exists then toggle this boolean to true.
-      // This will be used in the next step.
-      letterInWord = true;
-    }
-  }
-
-  // If the letter exists somewhere in the word,
-  // then figure out exactly where (which indices).
-  if (letterInWord) {
-
-    // Loop through the word
-    for (var j = 0; j < numBlanks; j++) {
-
-      // Populate the blanksAndSuccesses with every instance of the letter.
-      if (chosenWord[j] === letter) {
-
-        // Here we set specific blank spaces to equal the correct letter
-        // when there is a match.
-        blanksAndSuccesses[j] = letter;
-      }
-    }
 
     // Log the current blanks and successes for testing.
     console.log(blanksAndSuccesses);
