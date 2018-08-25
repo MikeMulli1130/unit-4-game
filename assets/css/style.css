@@ -1,0 +1,18 @@
+p {
+    font-family: fantasy; 
+    font-size: 16px;
+    line-height: 18px;
+    color: darkblue;
+
+}
+
+.container {
+    margin:auto;
+    padding-left: 10px;
+    padding-right: 20px;
+    width: 750px;
+}
+
+.crystals {
+    width: 75%;
+}
