@@ -5,8 +5,7 @@ var computerNumber  = Math.floor(Math.random() * 100);
 
 function randomWholeNum() {
 
-  // Only change code below this line.
-
+ 
   return Math.random();
 }
 
@@ -187,8 +186,6 @@ function roundComplete() {
 
 }
 
-// MAIN PROCESS (THIS IS THE CODE THAT CONTROLS WHAT IS ACTUALLY RUN)
-// ==================================================================
 
 // Starts the Game by running the startGame() function
 startGame();
