@@ -1,26 +1,56 @@
 /* first choose a random number
 this is shown to the player at the beginning of the game */
 
+var randomNumber=Math.floor(Math.random()*79)
+console.log(randomNumber);
 
 
-/* need four buttons - one for each crystal*/
-
-getElementById = "ruby"
-getElementById = "emerald"
-getElementById = "sapphire"
-getElementById = "topaz"
-
-/*player will have to guess a number then a number is added to their guess*/
+/* need four buttons - one for each "Crystal"; when one is clicked the number is shown*/
 
 
-var num = 0; 
+document.getElementById("ruby").onclick = numberOne;
+document.getElementById("emerald").onclick = numberTwo;
+document.getElementById("sapphire").onclick = numberThree;
+document.getElementById("topaz").onclick = numberFour;
+
+if {
+    numberOne + playerCount === randomNumber
+    console.log ("You Win!");
+}
+
+else if {
+
+}
+
+
+/*the nunber of the crystal will be added to the player's score (which starts at zero)*/
+
+/* the game keeps going until the player either goes over the original random number or*/
+/* or the player hits the number perfectly - if so, they win*/
+
+
+
+/* if the player goes OVER the original random number then they lose:*/
+
+
+/* player goes over: need to show "you lose"*/
+
+
+
+/* player hits it perfectly: need to show "you win!"*/
+
+
+/* need to keep a counter of what is guessed*/
+
+
+/* nee to reset the game when it's done (win or lose)*/
+
+
 
 
 // GLOBAL VARIABLES (accessible by all functions)
 // ==================================================================================================
 
-// Array of Word Options (all lowercase).
-var randomNumber = [1, 2, 3, 4, 5, 6];
 
 // Computer selected solution will be held here.
 var computerNumber = "";
