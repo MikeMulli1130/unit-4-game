@@ -35,7 +35,7 @@ numberOne >=1 && <= 49;
 /* if the player goes OVER the original random number then they lose:*/
 
 
-document.getElementById("ruby").onclick = function(numberOne) {
+document.getElementById("ruby").onclick = function(computerGuess) {
 console.log(numberOne)
 }
 
