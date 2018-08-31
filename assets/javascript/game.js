@@ -1,17 +1,107 @@
 //var list = ""; not sure what to do with this//
 
 //computerNumber is the number under the buttons//
-var computerNumber  = Math.floor(Math.random() * 100);
+//var computerNumber  = Math.floor(Math.random() * 100);
 
-function randomWholeNum() {
+//function randomWholeNum() {
 
  
-  return Math.random();
+//  return Math.random();
+//}
+
+var crystal = {
+ruby: {
+  name: "ruby",
+  value: 0,
+//how to call the object (line 15) - name of object, crystal
+//crystal.ruby.value will give us the value
+//crystal.sapphire.value will call the value for sapphire within the
+//crystal object
+
+
+//all four will go inside startGame fxn and equal to 
+  //add the remaining colors here, sapphire, emerald, topaz
+}, 
+sapphire: {
+  //etc...
+}
+}
+
+var startGame = function (){
+//current score = zero, so we can reset the score to zero
+//here we are starting and resetting the game on line 26
+//targetScore = getRandomNumber;
+//start game fxn is bulk of logic; targetscre = randomnumber. every time the game starts
+//we want game to be diffrernt
+//in same fxn we want to set crystal values to be different
+//by calling this fxn we values to be different every time
+//last thing in this fxn will associate score with currentScore and targetScore with html - 
+//resets current and target score to be reset every time
+//now use jqury to associate $(“#your-score”).text(currentScore);
+}
+
+//must create a function called checkWin
+
+//if current + target > random, we lost and we want to increase the loss count
+//need to associate variable with loss count ID 
+//need if statement - need to call the start function as well. 
+//all inside the first statement: 
+//$(“#loss-count”).text(lossCount);
+
+
+else if (currentScore === targetScore) {
+  alert("Congratulations! You Won!");
+  
+  winCount++;
+
+  $("#win-count").text(winCount);
+
+  startGame();
 }
 
 
+
+Collapse 
+
+3:00 PM
+Untitled 
+var checkWin = function() {
+
+// Check if currentScore is larger than targetScore
+if (currentScore > targetScore) {
+  alert("Sorry. You lost!");
+  console.log("You Lost");
+
+  // Add to Loss Counter
+  lossCount++;
+
+  $("#loss-count").text(lossCount);
+
+  startGame();
+}
+
+else if (currentScore === targetScore) {
+  alert("Congratulations! You Won!");
+  console.log("You Won!");
+
+  winCount++;
+
+  $("#win-count").text(winCount);
+
+  startGame();
+}
+
+};
+
+
+
+
+
+
+
+
 //crystalNumbers are the back end; var numberOne, etc., what to output when the buttons are pushed//
-var numberOne = 0, numberTwo = 0, numberThree = 0, numberFour = 0;
+var numb}erOne = 0, numberTwo = 0, numberThree = 0, numberFour = 0;
 var crystalNumbers = [numberOne, numberTwo, numberThree, numberFour];
 
 for(var  i = 0; i < crystalNumbers.length; i++){
@@ -34,19 +124,21 @@ numberThree >=1 && <=49;
 numberFour >=1 && <=49;
 */
 //what the player selects//
-var playerCount =['']
+//var playerCount =['']
 
 
-// Holds a list of guessed numbers 
-var guessedNumbers = [];
+//var guessedNumbers = [];
 
 // Holds all of the wrong guesses.
-var wrongGuesses = [];
+//var wrongGuesses = [];
 
 // Game counters
 var winCounter = 0;
 var lossCounter = 0;
 var numGuesses = 9;
+
+var currentScore =0;
+var targetScore = 0;
 
 /* random number this is shown to the player at the beginning of the game */
 
