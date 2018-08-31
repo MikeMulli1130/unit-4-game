@@ -11,16 +11,28 @@ function randomWholeNum() {
 
 
 //crystalNumbers are the back end; var numberOne, etc., what to output when the buttons are pushed//
-var crystalNumbers = "";
-var numberOne, numberTwo, numberThree, numberFour;
+var numberOne = 0, numberTwo = 0, numberThree = 0, numberFour = 0;
+var crystalNumbers = [numberOne, numberTwo, numberThree, numberFour];
+
+for(var  i = 0; i < crystalNumbers.length; i++){
+  crystalNumbers[i] = getRandomNumber()
+}
 
 //value range for the outputs//
 
+var getRandomNumber = function(){
+  var result = 0
+
+  result = Math.floor(Math.random()*49)
+
+  return result
+}
+/*
 numberOne >=1 && <= 49;
 numberTwo >=1 && <=49;
 numberThree >=1 && <=49;
 numberFour >=1 && <=49;
-
+*/
 //what the player selects//
 var playerCount =['']
 
@@ -66,9 +78,13 @@ document.getElementById("emerald").onclick = function(computerNumber) {
     document.getElementById("topaz").onclick = function(computerNumber) {
       console.log(numberFour)
       }
-      
-
-
+  /*    
+if(condition){
+  then behavior
+}else if(condition){
+  
+}
+*/
 if {
     "numberOne + playerCount" = = = randomNumber
     console.log ("You Win!");
